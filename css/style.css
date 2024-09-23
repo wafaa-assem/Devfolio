@@ -1,0 +1,399 @@
+/* general style */
+.bg-color {
+  background-color: #f5f5f5;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --p-color: #6c757d;
+  --after-color: #0078ff;
+}
+.shadow {
+  box-shadow: 0px 0px 3px grey;
+}
+.heading-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.heading-section p::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: var(--after-color);
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%);
+}
+/* *************** start navbar ******************* */
+.dropdown-menu {
+  display: none !important;
+}
+.dropdown:hover > .dropdown-menu,
+.dropstart:hover > .dropdown-menu {
+  display: block !important;
+}
+.dropstart > .dropdown-menu {
+  position: absolute;
+  right: 100%;
+  top: 0;
+}
+.nav-link > span::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  transition: all 0.4s;
+}
+.nav-link > span {
+  position: relative;
+}
+.nav-link > span:hover::after {
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .firstDrop {
+    width: 50%;
+  }
+  .secondDrop {
+    width: 100%;
+  }
+  .dropstart > .dropdown-menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+}
+/* *************** end navbar ******************* */
+/* *************** start header ******************* */
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./../images/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header h1 {
+  font-weight: 600;
+  font-size: 4rem;
+}
+.header span {
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+.header span::after {
+  content: "";
+  animation-name: anima;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+@keyframes anima {
+  5% {
+    content: "D|";
+  }
+  10% {
+    content: "De|";
+  }
+  15% {
+    content: "Dev|";
+  }
+  20% {
+    content: "Deve|";
+  }
+  22% {
+    content: "Develo|";
+  }
+  24% {
+    content: "Develop|";
+  }
+  26% {
+    content: "Develope|";
+  }
+  30% {
+    content: "Developer|";
+  }
+  35% {
+    content: "D|";
+  }
+  38% {
+    content: "De|";
+  }
+  42% {
+    content: "Desi|";
+  }
+  45% {
+    content: "Desine|";
+  }
+  50% {
+    content: "Desiner|";
+  }
+  55% {
+    content: "fr|";
+  }
+  60% {
+    content: "free|";
+  }
+  65% {
+    content: "freela|";
+  }
+  70% {
+    content: "freelan|";
+  }
+  75% {
+    content: "freelancer|";
+  }
+  80% {
+    content: "ph|";
+  }
+  85% {
+    content: "pho|";
+  }
+  90% {
+    content: "photo|";
+  }
+  95% {
+    content: "photogra|";
+  }
+  100% {
+    content: "photographer|";
+  }
+}
+
+/* *************** end header ******************* */
+/* *************** start about ******************* */
+.img-info ul li {
+  margin: 12px 0;
+}
+.right h2 {
+  position: relative;
+}
+.right h2::after {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: var(--after-color);
+  position: absolute;
+  top: 120%;
+  left: 0px;
+}
+.right p {
+  color: var(--p-color);
+}
+.range-one {
+  height: 10px;
+  background-image: linear-gradient(to right, #0078ff 85%, #cde1f8 85%);
+}
+.range-two {
+  height: 10px;
+  background-image: linear-gradient(to right, #0078ff 75%, #cde1f8 75%);
+}
+.range-three {
+  height: 10px;
+  background-image: linear-gradient(to right, #0078ff 50%, #cde1f8 50%);
+}
+.range-four {
+  height: 10px;
+  background-image: linear-gradient(to right, #0078ff 90%, #cde1f8 90%);
+}
+.left span {
+  color: #6c757d;
+}
+/* *************** end about ******************* */
+/* *************** start services ******************* */
+#services p {
+  color: var(--p-color);
+}
+.service .icon {
+  width: 100px;
+  height: 100px;
+  border: 0.5rem solid var(--after-color);
+  transition: all 0.7s;
+}
+.inner:hover .icon {
+  border: 0.5rem solid #cde1f8;
+  background-color: var(--after-color);
+  color: #fff;
+}
+.content h2 {
+  font-size: 1.5rem;
+}
+/* *************** end services ******************* */
+/* *************** start mini-section ******************* */
+.mini-section {
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)),
+    url("./../images/post-3.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.mini-section .inner .icona {
+  width: 70px;
+  height: 70px;
+  border: 0.5rem solid #cde1f8;
+}
+.mini-section .content h3 {
+  font-size: 1rem;
+}
+/* *************** end mini-section ******************* */
+/* *************** start portfolio ******************* */
+.card-body span {
+  color: var(--after-color);
+}
+.icon-card {
+  color: var(--after-color);
+  width: 25px;
+  height: 25px;
+  border: 0.2rem solid var(--after-color);
+}
+.icon-card i {
+  font-size: 1.5rem;
+}
+.card-img-top {
+  transition: all 2.5s;
+}
+.card-img-top:hover {
+  transform: scale(2);
+}
+/* *************** end portfolio ******************* */
+/* *************** start slider ******************* */
+.carousel-inner img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+.carousel-indicators > button {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50%;
+}
+/* *************** end slider ******************* */
+/* *************** start blog ******************* */
+.card-footer-left img {
+  width: 35px;
+  height: 35px;
+}
+.first {
+  color: black;
+  transition: all 1s;
+}
+.first:hover {
+  color: var(--after-color);
+}
+div h6 {
+  background-color: var(--after-color);
+  width: 70px;
+  height: 35px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  position: absolute;
+}
+.card {
+  position: relative;
+}
+.yadiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.two {
+  width: 100px;
+}
+.card-body p {
+  color: #6c757d;
+}
+/* *************** end blog ******************* */
+/* *************** start contact ******************* */
+#contact,
+.slider {
+  background-image: linear-gradient(
+      rgba(0, 120, 255, 0.6),
+      rgba(0, 120, 255, 0.6)
+    ),
+    url("./../images/overlay-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.contact-left h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: relative;
+}
+.contact-left h3::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: var(--after-color);
+  position: absolute;
+  top: 140%;
+  left: 0;
+}
+.contact-right > h3 {
+  position: relative;
+}
+.contact-right h3::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: var(--after-color);
+  position: absolute;
+  top: 140%;
+  left: 0;
+}
+.contact-right .first-list i {
+  color: var(--after-color);
+  margin-right: 0.8rem;
+  margin-top: 1rem;
+}
+.contact-right ul li span,
+p {
+  color: #6c757d;
+}
+.send {
+  border: 0.2rem solid transparent;
+  transition: all 0.7s;
+}
+.send:hover {
+  border-color: #cde1f8;
+  background-color: var(--after-color);
+}
+
+.last-ul li {
+  width: 35px;
+  height: 35px;
+  /* border-radius: 50%; */
+  border: 0.1rem solid var(--after-color);
+  transition: all 0.5s;
+}
+.last-ul li:hover {
+  border: 0.2rem solid #cde1f8;
+  background-color: var(--after-color);
+  color: #fff;
+}
+@media (max-width: 500px) {
+  ul.last-ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+/* *************** end contact ******************* */
+/* *************** start footer ******************* */
+footer {
+  background-color: #0062d3;
+}
+.arrow {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
+/* *************** end footer ******************* */
